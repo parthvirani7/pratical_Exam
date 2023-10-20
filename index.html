@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <!-- random color change -->
+
+  <body id="bdcolor">
+    <h1>color change</h1>
+  </body>
+  <script>
+    setInterval(() => {
+      function colorChange() {
+        var r = Math.floor(Math.random() * 256);
+        var g = Math.floor(Math.random() * 256);
+        var b = Math.floor(Math.random() * 256);
+        var code = "rgb" + "(" + r + "," + g + "," + b + ")";
+        return code;
+      }
+      color = colorChange();
+      // color code
+
+      console.log(colorChange());
+
+      document.getElementById("bdcolor");
+      // body color
+      bdcolor.style.backgroundColor = color;
+    }, 10000);
+  </script>
+</html>
